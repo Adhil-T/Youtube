@@ -10,7 +10,6 @@ nav {
 }
 
 .nav-left {
-    background-color: yellow;
     display: flex;
 }
 
@@ -20,12 +19,29 @@ nav {
 }
 
 .nav-middle {
-    height: 100%;
-    background-color: green;
+    display: flex;
+}
+
+.search-input {
+    width: 500px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 1px solid gray;
+    padding-left: 30px;
+}
+
+.search-button {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left: 0;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-right: 1px;
+    border-style: solid;
+    border-color: grey;
 }
 
 .nav-right {
-    background-color: yellow;
     display: flex;
 }
 
@@ -46,20 +62,18 @@ nav {
     margin-right: 10px;
 }
 
-section {
-    height: 200vh;
-    width: 100%;
-    background-color: green;
-}
-
 .phone-screen-search {
     display: none;
+}
+
+.list-icon-hide {
+    display: block;
 }
 
 @media (max-width:321px) {
     .youtube-navbar-logo {
         width: 75px;
-        height: 20px;
+        height: 18px;
         margin-bottom: 0px;
         margin-top: 4px;
     }
@@ -85,14 +99,36 @@ section {
         margin-bottom: 0px;
         margin-top: 2px;
     }
+}
+
+@media (max-width: 426px) {
+    .list-icon-hide {
+        display: none;
+    }
+
+    .phone-screen-search {
+        display: block;
+    }
 
     .nav-middle {
         display: none;
     }
 }
 
-@media (max-width: 426px) {
-    .phone-screen-search {
-        display: block;
-    }
+@media (min-width: 426px) and (max-width: 769px) {
+    .search-input {
+        width: 350px;
+    } 
+}
+
+@media (min-width: 770px) and (max-width: 1025px) {
+    .search-input {
+        width: 550px;
+    } 
+}
+
+@media (min-width: 1026px) and (max-width: 1441px) {
+    .search-input {
+        width: 750px;
+    } 
 }
