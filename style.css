@@ -1,5 +1,10 @@
+:root {
+    --hnb-w: 15%;
+    --vnb-h: 7vh;
+  }
+
 nav {
-    height: 7vh;
+    height: var(--vnb-h);
     width: 100%;
     background-color: white;
     display: flex;
@@ -7,6 +12,7 @@ nav {
     align-items: center;
     padding-left: 2%;
     padding-right: 2%;
+    position: fixed;
 }
 
 .nav-left {
@@ -101,6 +107,34 @@ nav {
     }
 }
 
+@media (max-width:750px) and (orientation: landscape) {
+    :root {
+        --vnb-h: 16vh;
+    }
+
+    nav {
+        height: var(--vnb-h);
+    }
+
+    .search-input {
+        width: 250px !important;
+    }
+
+    .horizontal-navbar {
+        height: 150vh !important;
+    }
+
+    .video-content-section {
+        height: 150vh !important;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 970px) and (orientation: landscape) {
+    :root {
+        --vnb-h: 15vh !important;
+    }
+}
+
 @media (max-width: 426px) {
     .list-icon-hide {
         display: none;
@@ -115,16 +149,71 @@ nav {
     }
 }
 
-@media (min-width: 426px) and (max-width: 769px) {
+@media (min-width: 426px) and (max-width: 650px) {
+    :root {
+        --hnb-w: 30%;
+    }
+
+    .nav-middle {
+        display: none;
+    }
+
+    .phone-screen-search {
+        display: block;
+    }
+
+    .horizontal-navbar {
+        width: var(--hnb-w);
+    }
+}
+
+@media (min-width: 651px) and (max-width: 768px) {
+    :root {
+        --hnb-w: 30%;
+    }
+
     .search-input {
         width: 350px;
-    } 
+    }
+
+    .horizontal-navbar {
+        width: var(--hnb-w);
+    }
 }
 
 @media (min-width: 770px) and (max-width: 1025px) {
+    :root {
+        --vnb-h: 5vh;
+    }
+
+    nav {
+        padding-left: 1%;
+        height: var(--vnb-h);
+    }
+
     .search-input {
         width: 550px;
-    } 
+    }
+    
+    :root {
+        --hnb-w: 25%;
+    }
+
+    .search-input {
+        width: 450px;
+        height: 35px;
+    }
+
+    .nav-item-gap {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1025px) {
+    :root {
+        --vnb-h: 10vh;
+    }
 }
 
 @media (min-width: 1026px) and (max-width: 1441px) {
@@ -137,10 +226,11 @@ nav {
     width: 100%;
     background-color: aqua;
     display: flex;
+    padding-top: var(--vnb-h);
 }
 
 .horizontal-navbar {
-    width: 15%;
+    width: var(--hnb-w);
     height: 100vh;
     padding: 3px 5px;
     background-color: white;
@@ -148,6 +238,7 @@ nav {
     flex-direction: column;
     gap: 3px;
     display: block;
+    position: fixed;
 }
 
 .horizontal-navbar button {
@@ -169,6 +260,7 @@ nav {
     width: 85%;
     height: 100vh;
     background-color: red;
+    margin-left: var(--hnb-w);
 }
 
 .fs-icon-hor {
@@ -182,11 +274,6 @@ nav {
 
     .video-content-section {
         width: 100%;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 769px) {
-    .horizontal-navbar {
-        width: 25%;
+        margin-left: 0px;
     }
 }
