@@ -78,7 +78,6 @@ nav {
 
 .bellow-nav {
     width: 100%;
-    background-color: aqua;
     display: flex;
     padding-top: var(--vnb-h);
 }
@@ -113,7 +112,6 @@ nav {
 .video-content-section {
     width: 85%;
     height: 100vh;
-    background-color: red;
     margin-left: var(--hnb-w);
 }
 
@@ -151,6 +149,18 @@ nav {
         margin-top: 2px;
     }
 }
+
+@media (max-width: 390px) {
+    .thumbnail {
+        width: 340px !important;
+    }
+
+    .content-details {
+        width: 280px !important;
+        font-size: 14px;
+    }
+}
+
 
 @media (max-width: 426px) {
     .list-icon-hide {
@@ -289,4 +299,63 @@ nav {
         width: 100%;
         margin-left: 0px;
     }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+.bold {
+    font-weight: 400;
+}
+
+.fs-s {
+    font-size: 14px;
+}
+
+.grey-name {
+    color: grey;
+}
+
+.service-contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 33%;
+}
+
+.creator-reference {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 380px;
+    border-radius: 10px;
+}
+
+.creators-description {
+    display: flex;
+    gap: 015px;
+}
+
+.creator-profile {
+    width: 50px;
+}
+
+.creator-profile-image {
+    width: 35px;
+    border-radius: 30px;
+}
+
+.content-details {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 15px;
 }
